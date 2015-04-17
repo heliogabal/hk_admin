@@ -220,13 +220,6 @@ function hk_admin_user_default_permissions() {
     'module' => 'crm_core_contact',
   );
 
-  // Exported permission: 'delete any image files'.
-  $permissions['delete any image files'] = array(
-    'name' => 'delete any image files',
-    'roles' => array(),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: 'delete any relation entity of bundle crm_employee'.
   $permissions['delete any relation entity of bundle crm_employee'] = array(
     'name' => 'delete any relation entity of bundle crm_employee',
@@ -246,13 +239,6 @@ function hk_admin_user_default_permissions() {
     'name' => 'delete any relation entity of bundle crm_member',
     'roles' => array(),
     'module' => 'crm_core_relationship',
-  );
-
-  // Exported permission: 'delete own image files'.
-  $permissions['delete own image files'] = array(
-    'name' => 'delete own image files',
-    'roles' => array(),
-    'module' => 'file_entity',
   );
 
   // Exported permission: 'edit any crm_core_activity entity'.
@@ -311,13 +297,6 @@ function hk_admin_user_default_permissions() {
     'module' => 'crm_core_contact',
   );
 
-  // Exported permission: 'edit any image files'.
-  $permissions['edit any image files'] = array(
-    'name' => 'edit any image files',
-    'roles' => array(),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: 'edit any relation entity of bundle crm_employee'.
   $permissions['edit any relation entity of bundle crm_employee'] = array(
     'name' => 'edit any relation entity of bundle crm_employee',
@@ -344,13 +323,6 @@ function hk_admin_user_default_permissions() {
     'name' => 'edit own contact information',
     'roles' => array(),
     'module' => 'crm_core_user_sync',
-  );
-
-  // Exported permission: 'edit own image files'.
-  $permissions['edit own image files'] = array(
-    'name' => 'edit own image files',
-    'roles' => array(),
-    'module' => 'file_entity',
   );
 
   // Exported permission: 'edit relation entities of any contact relationship'.
@@ -465,16 +437,6 @@ function hk_admin_user_default_permissions() {
     'module' => 'crm_core_contact',
   );
 
-  // Exported permission: 'view files'.
-  $permissions['view files'] = array(
-    'name' => 'view files',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: 'view match information'.
   $permissions['view match information'] = array(
     'name' => 'view match information',
@@ -487,20 +449,6 @@ function hk_admin_user_default_permissions() {
     'name' => 'view matching engine rules configuration',
     'roles' => array(),
     'module' => 'crm_core_match',
-  );
-
-  // Exported permission: 'view own files'.
-  $permissions['view own files'] = array(
-    'name' => 'view own files',
-    'roles' => array(),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: 'view private files'.
-  $permissions['view private files'] = array(
-    'name' => 'view private files',
-    'roles' => array(),
-    'module' => 'file_entity',
   );
 
   // Exported permission: 'view relation entities of any contact relationship'.
