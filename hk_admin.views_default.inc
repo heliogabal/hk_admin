@@ -47,7 +47,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
       'allow_secondary' => 0,
-      'secondary_label' => 'Advanced options',
+      'secondary_label' => 'Erweiterte Optionen',
       'collapsible_label' => NULL,
       'combine_rewrite' => NULL,
       'reset_label' => NULL,
@@ -2207,7 +2207,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['page_number']['id'] = 'page_number';
   $handler->display->display_options['fields']['page_number']['table'] = 'pdf';
   $handler->display->display_options['fields']['page_number']['field'] = 'page_number';
-  $handler->display->display_options['fields']['page_number']['label'] = 'Page';
+  $handler->display->display_options['fields']['page_number']['label'] = 'Seite';
   $handler->display->display_options['fields']['page_number']['element_label_colon'] = FALSE;
   /* Feld: Inhalt: Apartment No. */
   $handler->display->display_options['fields']['field_apart_no']['id'] = 'field_apart_no';
