@@ -611,7 +611,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Feld: Workflow current: New state name */
+  /* Feld: Beschädigte/fehlende Behandlungsroutine */
   $handler->display->display_options['fields']['sid']['id'] = 'sid';
   $handler->display->display_options['fields']['sid']['table'] = 'workflow_node_current';
   $handler->display->display_options['fields']['sid']['field'] = 'sid';
@@ -711,10 +711,12 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['filters']['field_kategorie_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_kategorie_tid']['vocabulary'] = 'category';
   $handler->display->display_options['filters']['field_kategorie_tid']['hierarchy'] = 1;
-  /* Filterkriterium: Workflow current: New state name */
+  /* Filterkriterium: Beschädigte/fehlende Behandlungsroutine */
   $handler->display->display_options['filters']['sid']['id'] = 'sid';
   $handler->display->display_options['filters']['sid']['table'] = 'workflow_node_current';
   $handler->display->display_options['filters']['sid']['field'] = 'sid';
+  $handler->display->display_options['filters']['sid']['operator'] = 'in';
+  $handler->display->display_options['filters']['sid']['value'] = array();
   $handler->display->display_options['filters']['sid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['sid']['expose']['operator_id'] = 'sid_op';
   $handler->display->display_options['filters']['sid']['expose']['label'] = 'Status';
@@ -729,7 +731,6 @@ function hk_admin_views_default_views() {
     7 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['sid']['expose']['workflow_include_all'] = TRUE;
 
   /* Display: Admin Dashboard */
   $handler = $view->new_display('page', 'Admin Dashboard', 'dashboard');
@@ -964,7 +965,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['changed']['date_format'] = 'short';
   $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
-  /* Feld: Workflow current: New state name */
+  /* Feld: Beschädigte/fehlende Behandlungsroutine */
   $handler->display->display_options['fields']['sid']['id'] = 'sid';
   $handler->display->display_options['fields']['sid']['table'] = 'workflow_node_current';
   $handler->display->display_options['fields']['sid']['field'] = 'sid';
@@ -1031,7 +1032,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['filters']['field_bezirk_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_bezirk_tid']['vocabulary'] = 'vocabulary_3';
   $handler->display->display_options['filters']['field_bezirk_tid']['hierarchy'] = 1;
-  /* Filterkriterium: Workflow current: New state name */
+  /* Filterkriterium: Beschädigte/fehlende Behandlungsroutine */
   $handler->display->display_options['filters']['sid']['id'] = 'sid';
   $handler->display->display_options['filters']['sid']['table'] = 'workflow_node_current';
   $handler->display->display_options['filters']['sid']['field'] = 'sid';
@@ -1050,8 +1051,6 @@ function hk_admin_views_default_views() {
     7 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['sid']['expose']['workflow_reduce_wid'] = '1';
-  $handler->display->display_options['filters']['sid']['expose']['workflow_include_all'] = TRUE;
   /* Filterkriterium: Inhalt: Titel (title_field) */
   $handler->display->display_options['filters']['title_field_value']['id'] = 'title_field_value';
   $handler->display->display_options['filters']['title_field_value']['table'] = 'field_data_title_field';
@@ -1491,7 +1490,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['filters']['field_bezirk_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_bezirk_tid']['vocabulary'] = 'vocabulary_3';
   $handler->display->display_options['filters']['field_bezirk_tid']['hierarchy'] = 1;
-  /* Filterkriterium: Workflow current: New state name */
+  /* Filterkriterium: Beschädigte/fehlende Behandlungsroutine */
   $handler->display->display_options['filters']['sid']['id'] = 'sid';
   $handler->display->display_options['filters']['sid']['table'] = 'workflow_node_current';
   $handler->display->display_options['filters']['sid']['field'] = 'sid';
@@ -1509,8 +1508,6 @@ function hk_admin_views_default_views() {
     7 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['sid']['expose']['workflow_reduce_wid'] = '1';
-  $handler->display->display_options['filters']['sid']['expose']['workflow_include_all'] = TRUE;
   $handler->display->display_options['path'] = 'admin/dash/seiten';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Seiten';
