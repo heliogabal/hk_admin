@@ -94,13 +94,6 @@ function hk_admin_user_default_permissions() {
     'module' => 'crm_core_activity',
   );
 
-  // Exported permission: 'create crm_core_activity entities of bundle anfrage'.
-  $permissions['create crm_core_activity entities of bundle anfrage'] = array(
-    'name' => 'create crm_core_activity entities of bundle anfrage',
-    'roles' => array(),
-    'module' => 'crm_core_activity',
-  );
-
   // Exported permission: 'create crm_core_activity entities of bundle meeting'.
   $permissions['create crm_core_activity entities of bundle meeting'] = array(
     'name' => 'create crm_core_activity entities of bundle meeting',
@@ -178,13 +171,6 @@ function hk_admin_user_default_permissions() {
     'module' => 'crm_core_relationship',
   );
 
-  // Exported permission: 'delete any crm_core_activity entity of bundle anfrage'.
-  $permissions['delete any crm_core_activity entity of bundle anfrage'] = array(
-    'name' => 'delete any crm_core_activity entity of bundle anfrage',
-    'roles' => array(),
-    'module' => 'crm_core_activity',
-  );
-
   // Exported permission: 'delete any crm_core_activity entity of bundle meeting'.
   $permissions['delete any crm_core_activity entity of bundle meeting'] = array(
     'name' => 'delete any crm_core_activity entity of bundle meeting',
@@ -244,13 +230,6 @@ function hk_admin_user_default_permissions() {
   // Exported permission: 'edit any crm_core_activity entity'.
   $permissions['edit any crm_core_activity entity'] = array(
     'name' => 'edit any crm_core_activity entity',
-    'roles' => array(),
-    'module' => 'crm_core_activity',
-  );
-
-  // Exported permission: 'edit any crm_core_activity entity of bundle anfrage'.
-  $permissions['edit any crm_core_activity entity of bundle anfrage'] = array(
-    'name' => 'edit any crm_core_activity entity of bundle anfrage',
     'roles' => array(),
     'module' => 'crm_core_activity',
   );
@@ -342,13 +321,6 @@ function hk_admin_user_default_permissions() {
   // Exported permission: 'view any crm_core_activity entity'.
   $permissions['view any crm_core_activity entity'] = array(
     'name' => 'view any crm_core_activity entity',
-    'roles' => array(),
-    'module' => 'crm_core_activity',
-  );
-
-  // Exported permission: 'view any crm_core_activity entity of bundle anfrage'.
-  $permissions['view any crm_core_activity entity of bundle anfrage'] = array(
-    'name' => 'view any crm_core_activity entity of bundle anfrage',
     'roles' => array(),
     'module' => 'crm_core_activity',
   );
