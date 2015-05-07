@@ -50,11 +50,11 @@ function hk_admin_field_default_field_bases() {
         ),
       ),
       'components' => array(
-        'credentials' => 'credentials',
+        'credentials' => 0,
         'family' => 'family',
-        'generational' => 'generational',
+        'generational' => 0,
         'given' => 'given',
-        'middle' => 'middle',
+        'middle' => 0,
         'title' => 'title',
       ),
       'entity_translation_sync' => FALSE,
@@ -73,9 +73,9 @@ IX
 X',
       'labels' => array(
         'credentials' => 'Credentials',
-        'family' => 'Last',
+        'family' => 'Last Name',
         'generational' => 'Generational',
-        'given' => 'First',
+        'given' => 'First Name',
         'middle' => 'Middle',
         'title' => 'Title',
       ),
@@ -138,7 +138,7 @@ Prof.',
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'individual' => 'individual',
+          'mitarbeiter' => 'mitarbeiter',
         ),
       ),
       'target_type' => 'crm_core_contact',
@@ -221,7 +221,18 @@ Prof.',
       'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
-        'target_bundles' => array(),
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'individual' => 'individual',
+          'mitarbeiter' => 'mitarbeiter',
+        ),
       ),
       'handler_submit' => 'Change handler',
       'target_type' => 'crm_core_contact',
@@ -253,6 +264,7 @@ Prof.',
         'Erledigt' => 'Erledigt',
       ),
       'allowed_values_function' => '',
+      'allowed_values_no_localization' => 0,
       'entity_translation_sync' => FALSE,
     ),
     'translatable' => 0,
@@ -295,38 +307,30 @@ Prof.',
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_contact_bild'
-  $field_bases['field_contact_bild'] = array(
+  // Exported field_base: 'field_crm_address'
+  $field_bases['field_crm_address'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_contact_bild',
-    'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
-      ),
-    ),
+    'field_name' => 'field_crm_address',
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'image',
+    'module' => 'addressfield',
     'settings' => array(
-      'default_image' => 17561,
-      'entity_translation_sync' => array(
-        0 => 'fid',
-      ),
-      'uri_scheme' => 'public',
+      'entity_translation_sync' => FALSE,
     ),
     'translatable' => 0,
-    'type' => 'image',
+    'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_contact_email'
-  $field_bases['field_contact_email'] = array(
+  // Exported field_base: 'field_e_mail'
+  $field_bases['field_e_mail'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_contact_email',
+    'field_name' => 'field_e_mail',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'email',
@@ -337,13 +341,13 @@ Prof.',
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_contact_fax'
-  $field_bases['field_contact_fax'] = array(
+  // Exported field_base: 'field_phone'
+  $field_bases['field_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_contact_fax',
+    'field_name' => 'field_phone',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'phone',
@@ -353,74 +357,6 @@ Prof.',
     ),
     'translatable' => 0,
     'type' => 'phone',
-  );
-
-  // Exported field_base: 'field_contact_position'
-  $field_bases['field_contact_position'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_contact_position',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_contact_telefon'
-  $field_bases['field_contact_telefon'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_contact_telefon',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'phone',
-    'settings' => array(
-      'country' => 'int',
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'phone',
-  );
-
-  // Exported field_base: 'field_contact_typ'
-  $field_bases['field_contact_typ'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_contact_typ',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'Makler' => 'Makler',
-        'Kunde' => 'Kunde',
-        'Geschäftspartner' => 'Geschäftspartner',
-        'Interessent' => 'Interessent',
-      ),
-      'allowed_values_function' => '',
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
   );
 
   return $field_bases;
