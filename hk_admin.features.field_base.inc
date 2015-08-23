@@ -46,7 +46,7 @@ function hk_admin_field_default_field_bases() {
         'given' => array(),
         'middle' => array(),
         'title' => array(
-          'title' => 'title',
+          'title' => 0,
         ),
       ),
       'components' => array(
@@ -93,17 +93,15 @@ X',
         'generational' => 0,
         'given' => 'given',
         'middle' => 0,
-        'title' => 0,
+        'title' => 'title',
       ),
       'sort_options' => array(
         'generational' => 0,
-        'title' => 'title',
+        'title' => 0,
       ),
-      'title_options' => '-- --
-Mr.
-Mrs.
-Miss
-Ms.
+      'title_options' => '--please select
+Herr
+Frau
 Dr.
 Prof.',
     ),

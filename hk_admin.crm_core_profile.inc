@@ -17,7 +17,7 @@ function hk_admin_default_crm_core_profile() {
   $crm_core_profile->label = 'Anfrage';
   $crm_core_profile->entities = array(
     'crm_core_contact' => array(
-      'label' => 'CRM Core Contact',
+      'label' => 'CRM Core Kontakt',
       'status' => 1,
       'bundle' => 'individual',
       'fields_container' => array(
@@ -32,7 +32,7 @@ function hk_admin_default_crm_core_profile() {
       'prepopulate_type' => 'token_contact',
     ),
     'crm_core_activity' => array(
-      'label' => 'CRM Core Activity',
+      'label' => 'CRM Core Aktivität',
       'status' => 1,
       'bundle' => 'anfrage',
       'fields_container' => array(
@@ -55,7 +55,7 @@ function hk_admin_default_crm_core_profile() {
       'handler' => 'NameProfileFieldHandler',
       'entity_type' => 'crm_core_contact',
       'bundle' => 'individual',
-      'status' => 0,
+      'status' => 1,
       'weight' => '-47',
     ),
     'crm_core_contact_individual_contact_name_title' => array(
@@ -64,10 +64,10 @@ function hk_admin_default_crm_core_profile() {
       'handler' => 'NameProfileFieldHandler',
       'entity_type' => 'crm_core_contact',
       'bundle' => 'individual',
-      'status' => 0,
-      'hidden' => 1,
+      'status' => 1,
+      'hidden' => 0,
       'default' => '',
-      'weight' => '-42',
+      'weight' => '-46',
     ),
     'crm_core_contact_individual_contact_name_given' => array(
       'field_name' => 'contact_name',
@@ -78,7 +78,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-46',
+      'weight' => '-45',
     ),
     'crm_core_contact_individual_contact_name_middle' => array(
       'field_name' => 'contact_name',
@@ -89,7 +89,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 1,
       'default' => '',
-      'weight' => '-41',
+      'weight' => '-38',
     ),
     'crm_core_contact_individual_contact_name_family' => array(
       'field_name' => 'contact_name',
@@ -100,7 +100,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-45',
+      'weight' => '-44',
     ),
     'crm_core_contact_individual_contact_name_generational' => array(
       'field_name' => 'contact_name',
@@ -111,7 +111,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 1,
       'default' => '',
-      'weight' => '-38',
+      'weight' => '-39',
     ),
     'crm_core_contact_individual_contact_name_credentials' => array(
       'field_name' => 'contact_name',
@@ -144,7 +144,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-44',
+      'weight' => '-42',
     ),
     'crm_core_activity_anfrage_field_activity_participants' => array(
       'field_name' => 'field_activity_participants',
@@ -170,7 +170,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-40',
+      'weight' => '-41',
     ),
     'crm_core_activity_anfrage_field_activity_status' => array(
       'field_name' => 'field_activity_status',
@@ -196,7 +196,7 @@ function hk_admin_default_crm_core_profile() {
           'target_id' => NULL,
         ),
       ),
-      'weight' => '-39',
+      'weight' => '-40',
     ),
     'crm_core_activity_anfrage_field_angefragte_wohnung' => array(
       'field_name' => 'field_angefragte_wohnung',
@@ -214,9 +214,9 @@ function hk_admin_default_crm_core_profile() {
       'weight' => '-48',
     ),
   );
-  $crm_core_profile->block = FALSE;
-  $crm_core_profile->block_title = '';
-  $crm_core_profile->page = TRUE;
+  $crm_core_profile->block = TRUE;
+  $crm_core_profile->block_title = 'Inquiry';
+  $crm_core_profile->page = FALSE;
   $crm_core_profile->page_title = 'Inquiry';
   $crm_core_profile->page_path = 'anfrage';
   $crm_core_profile->page_redirect = '';
@@ -241,7 +241,7 @@ function hk_admin_default_crm_core_profile() {
   $crm_core_profile->label = 'Kontaktformular';
   $crm_core_profile->entities = array(
     'crm_core_contact' => array(
-      'label' => 'CRM Core Contact',
+      'label' => 'CRM Core Kontakt',
       'status' => 1,
       'bundle' => 'individual',
       'fields_container' => array(
@@ -256,7 +256,7 @@ function hk_admin_default_crm_core_profile() {
       'prepopulate_type' => 'token_contact',
     ),
     'crm_core_activity' => array(
-      'label' => 'CRM Core Activity',
+      'label' => 'CRM Core Aktivität',
       'status' => 1,
       'bundle' => 'kontaktformular',
       'fields_container' => array(
@@ -276,8 +276,8 @@ function hk_admin_default_crm_core_profile() {
       'handler' => 'NameProfileFieldHandler',
       'entity_type' => 'crm_core_contact',
       'bundle' => 'individual',
-      'status' => 0,
-      'weight' => '-33',
+      'status' => 1,
+      'weight' => '-50',
     ),
     'crm_core_contact_individual_contact_name_title' => array(
       'field_name' => 'contact_name',
@@ -285,10 +285,10 @@ function hk_admin_default_crm_core_profile() {
       'handler' => 'NameProfileFieldHandler',
       'entity_type' => 'crm_core_contact',
       'bundle' => 'individual',
-      'status' => 0,
+      'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-32',
+      'weight' => '-49',
     ),
     'crm_core_contact_individual_contact_name_given' => array(
       'field_name' => 'contact_name',
@@ -299,7 +299,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-50',
+      'weight' => '-48',
     ),
     'crm_core_contact_individual_contact_name_middle' => array(
       'field_name' => 'contact_name',
@@ -310,7 +310,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-30',
+      'weight' => '-27',
     ),
     'crm_core_contact_individual_contact_name_family' => array(
       'field_name' => 'contact_name',
@@ -321,7 +321,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-48',
+      'weight' => '-47',
     ),
     'crm_core_contact_individual_contact_name_generational' => array(
       'field_name' => 'contact_name',
@@ -332,7 +332,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-28',
+      'weight' => '-26',
     ),
     'crm_core_contact_individual_contact_name_credentials' => array(
       'field_name' => 'contact_name',
@@ -343,7 +343,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-27',
+      'weight' => '-25',
     ),
     'crm_core_contact_individual_field_e_mail' => array(
       'field_name' => 'field_e_mail',
@@ -354,7 +354,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-44',
+      'weight' => '-46',
     ),
     'crm_core_contact_individual_field_phone' => array(
       'field_name' => 'field_phone',
@@ -365,7 +365,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-46',
+      'weight' => '-45',
     ),
     'crm_core_contact_individual_field_crm_address' => array(
       'field_name' => 'field_crm_address',
@@ -373,8 +373,8 @@ function hk_admin_default_crm_core_profile() {
       'handler' => 'addressfieldProfileFieldHandler',
       'entity_type' => 'crm_core_contact',
       'bundle' => 'individual',
-      'status' => 0,
-      'weight' => '-50',
+      'status' => 1,
+      'weight' => '-44',
     ),
     'crm_core_contact_individual_field_crm_address_country' => array(
       'field_name' => 'field_crm_address',
@@ -385,7 +385,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 1,
       'default' => '',
-      'weight' => '-49',
+      'weight' => '-38',
     ),
     'crm_core_contact_individual_field_crm_address_administrative_area' => array(
       'field_name' => 'field_crm_address',
@@ -396,7 +396,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 1,
       'default' => '',
-      'weight' => '-48',
+      'weight' => '-37',
     ),
     'crm_core_contact_individual_field_crm_address_sub_administrative_area' => array(
       'field_name' => 'field_crm_address',
@@ -407,7 +407,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 1,
       'default' => '',
-      'weight' => '-47',
+      'weight' => '-36',
     ),
     'crm_core_contact_individual_field_crm_address_locality' => array(
       'field_name' => 'field_crm_address',
@@ -418,7 +418,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-36',
+      'weight' => '-41',
     ),
     'crm_core_contact_individual_field_crm_address_dependent_locality' => array(
       'field_name' => 'field_crm_address',
@@ -429,7 +429,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 1,
       'default' => '',
-      'weight' => '-45',
+      'weight' => '-35',
     ),
     'crm_core_contact_individual_field_crm_address_postal_code' => array(
       'field_name' => 'field_crm_address',
@@ -440,7 +440,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-38',
+      'weight' => '-42',
     ),
     'crm_core_contact_individual_field_crm_address_thoroughfare' => array(
       'field_name' => 'field_crm_address',
@@ -451,7 +451,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-40',
+      'weight' => '-43',
     ),
     'crm_core_contact_individual_field_crm_address_premise' => array(
       'field_name' => 'field_crm_address',
@@ -462,7 +462,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-42',
+      'weight' => '-34',
     ),
     'crm_core_contact_individual_field_crm_address_sub_premise' => array(
       'field_name' => 'field_crm_address',
@@ -473,7 +473,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-41',
+      'weight' => '-33',
     ),
     'crm_core_contact_individual_field_crm_address_organisation_name' => array(
       'field_name' => 'field_crm_address',
@@ -484,7 +484,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-40',
+      'weight' => '-32',
     ),
     'crm_core_contact_individual_field_crm_address_name_line' => array(
       'field_name' => 'field_crm_address',
@@ -495,7 +495,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-39',
+      'weight' => '-31',
     ),
     'crm_core_contact_individual_field_crm_address_first_name' => array(
       'field_name' => 'field_crm_address',
@@ -506,7 +506,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-38',
+      'weight' => '-30',
     ),
     'crm_core_contact_individual_field_crm_address_last_name' => array(
       'field_name' => 'field_crm_address',
@@ -517,7 +517,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-37',
+      'weight' => '-29',
     ),
     'crm_core_contact_individual_field_crm_address_data' => array(
       'field_name' => 'field_crm_address',
@@ -528,7 +528,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 0,
       'hidden' => 0,
       'default' => '',
-      'weight' => '-36',
+      'weight' => '-28',
     ),
     'crm_core_activity_kontaktformular_field_activity_date' => array(
       'field_name' => 'field_activity_date',
@@ -539,7 +539,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 1,
       'default' => '',
-      'weight' => '26',
+      'weight' => '-39',
     ),
     'crm_core_activity_kontaktformular_field_activity_notes' => array(
       'field_name' => 'field_activity_notes',
@@ -550,7 +550,7 @@ function hk_admin_default_crm_core_profile() {
       'status' => 1,
       'hidden' => 0,
       'default' => '',
-      'weight' => '26',
+      'weight' => '-40',
     ),
   );
   $crm_core_profile->block = TRUE;
@@ -564,14 +564,11 @@ your Herbert + Kohlmeyer Team';
   $crm_core_profile->status = TRUE;
   $crm_core_profile->uid = 1;
   $crm_core_profile->created = 1430982462;
-  $crm_core_profile->contact_match = '';
-  $crm_core_profile->contact_match_engines = '';
+  $crm_core_profile->contact_match = 'default';
+  $crm_core_profile->contact_match_engines = array();
   $crm_core_profile->access_control = 'default';
   $crm_core_profile->access_control_perm = 'none';
-  $crm_core_profile->roles = array(
-    'anonymous user' => 'anonymous user',
-    'authenticated user' => 'authenticated user',
-  );
+  $crm_core_profile->roles = array();
   $export['kontaktformular'] = $crm_core_profile;
 
   return $export;

@@ -26,6 +26,7 @@ function hk_admin_user_default_permissions() {
     'name' => 'administer crm_core_contact entities',
     'roles' => array(
       'administrator' => 'administrator',
+      'admintooluser' => 'admintooluser',
     ),
     'module' => 'crm_core_contact',
   );

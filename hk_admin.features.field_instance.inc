@@ -265,7 +265,7 @@ function hk_admin_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'crm_core_activity',
     'field_name' => 'field_angefragte_wohnung',
-    'label' => 'Apartment interested in',
+    'label' => 'Inquiry for',
     'required' => 0,
     'settings' => array(
       'behaviors' => array(
@@ -459,12 +459,12 @@ function hk_admin_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'crm_core_contact',
     'field_name' => 'contact_name',
-    'label' => 'Individual',
-    'required' => 0,
+    'label' => 'Name',
+    'required' => 1,
     'settings' => array(
       'component_css' => '',
       'component_layout' => 'default',
-      'credentials_inline' => 0,
+      'credentials_inline' => 1,
       'entity_translation_sync' => FALSE,
       'field_type' => array(
         'credentials' => 'text',
@@ -551,12 +551,12 @@ function hk_admin_field_default_field_instances() {
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-country' => 'address-hide-country',
+          'address-optional' => 'address-optional',
           'address-hide-postal-code' => 0,
           'address-hide-street' => 0,
           'organisation' => 0,
-          'name-full' => 0,
           'name-oneline' => 0,
-          'address-optional' => 0,
+          'name-full' => 0,
         ),
       ),
       'type' => 'addressfield_standard',
@@ -592,7 +592,7 @@ function hk_admin_field_default_field_instances() {
       'active' => 1,
       'module' => 'email',
       'settings' => array(
-        'size' => 60,
+        'size' => 36,
       ),
       'type' => 'email_textfield',
       'weight' => 1,
@@ -662,6 +662,7 @@ function hk_admin_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'crm_core_contact',
     'field_name' => 'contact_name',
     'label' => 'Mitarbeiter',
@@ -669,14 +670,6 @@ function hk_admin_field_default_field_instances() {
     'settings' => array(
       'component_css' => '',
       'component_layout' => 'default',
-      'components' => array(
-        'credentials' => 0,
-        'family' => 0,
-        'generational' => 0,
-        'given' => 0,
-        'middle' => 0,
-        'title' => 0,
-      ),
       'credentials_inline' => 0,
       'entity_translation_sync' => FALSE,
       'field_type' => array(
@@ -695,22 +688,6 @@ function hk_admin_field_default_field_instances() {
         'given' => '',
         'middle' => '',
         'title' => '',
-      ),
-      'labels' => array(
-        'credentials' => '',
-        'family' => '',
-        'generational' => '',
-        'given' => '',
-        'middle' => '',
-        'title' => '',
-      ),
-      'minimum_components' => array(
-        'credentials' => 0,
-        'family' => 0,
-        'generational' => 0,
-        'given' => 0,
-        'middle' => 0,
-        'title' => 0,
       ),
       'override_format' => 'default',
       'show_component_required_marker' => 0,
@@ -818,12 +795,12 @@ function hk_admin_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
-  t('Apartment interested in');
   t('Bearbeiter');
   t('Date');
   t('E-Mail');
-  t('Individual');
+  t('Inquiry for');
   t('Mitarbeiter');
+  t('Name');
   t('Notes');
   t('Participants');
   t('Phone');
