@@ -386,7 +386,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['edit_node']['alter']['text'] = '<a href="/node/[nid]/edit?destination=admin/dash" title="Objekt bearbeiten">bearbeiten</a> | <a href="/node/[nid]/translate?destination=admin/dash" title="Objekt übersetzen">übersetzen</a>';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -406,11 +406,12 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['sid']['field'] = 'sid';
   $handler->display->display_options['fields']['sid']['label'] = 'Status';
   $handler->display->display_options['fields']['sid']['element_label_colon'] = FALSE;
-  /* Field: Content: Status */
+  /* Field: Content: Save Workflow */
   $handler->display->display_options['fields']['field_save_workflow']['id'] = 'field_save_workflow';
   $handler->display->display_options['fields']['field_save_workflow']['table'] = 'field_data_field_save_workflow';
   $handler->display->display_options['fields']['field_save_workflow']['field'] = 'field_save_workflow';
   $handler->display->display_options['fields']['field_save_workflow']['relationship'] = 'field_obj_apartments_target_id';
+  $handler->display->display_options['fields']['field_save_workflow']['label'] = 'Status';
   $handler->display->display_options['fields']['field_save_workflow']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_save_workflow']['element_label_colon'] = FALSE;
   /* Field: Content: Apartments */
@@ -449,7 +450,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['changed']['date_format'] = 'short';
   $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
-  /* Sort criterion: Content: Object ID (field_objektid_nunumeric) */
+  /* Sort criterion: Content: Objekt ID (field_objektid_nunumeric) */
   $handler->display->display_options['sorts']['field_objektid_nunumeric_value']['id'] = 'field_objektid_nunumeric_value';
   $handler->display->display_options['sorts']['field_objektid_nunumeric_value']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['sorts']['field_objektid_nunumeric_value']['field'] = 'field_objektid_nunumeric_value';
@@ -818,7 +819,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -1167,7 +1168,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['edit_node']['alter']['text'] = '<a href="/node/[nid]/edit?destination=admin/dash" title="Objekt bearbeiten">bearbeiten</a> | <a href="/node/[nid]/translate?destination=admin/dash" title="Objekt übersetzen">übersetzen</a>';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -1187,11 +1188,12 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['sid']['field'] = 'sid';
   $handler->display->display_options['fields']['sid']['label'] = 'Status';
   $handler->display->display_options['fields']['sid']['element_label_colon'] = FALSE;
-  /* Field: Content: Status */
+  /* Field: Content: Save Workflow */
   $handler->display->display_options['fields']['field_save_workflow']['id'] = 'field_save_workflow';
   $handler->display->display_options['fields']['field_save_workflow']['table'] = 'field_data_field_save_workflow';
   $handler->display->display_options['fields']['field_save_workflow']['field'] = 'field_save_workflow';
   $handler->display->display_options['fields']['field_save_workflow']['relationship'] = 'field_obj_apartments_target_id';
+  $handler->display->display_options['fields']['field_save_workflow']['label'] = 'Status';
   $handler->display->display_options['fields']['field_save_workflow']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_save_workflow']['element_label_colon'] = FALSE;
   /* Field: Content: Apartments */
@@ -1502,7 +1504,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['edit_node']['alter']['text'] = '<a href="/node/[nid]/edit?destination=admin/dash" title="Objekt bearbeiten">bearbeiten</a> | <a href="/node/[nid]/translate?destination=admin/dash" title="Objekt übersetzen">übersetzen</a>';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  /* Field: Content: Object ID (editable) */
+  /* Field: Content: Objekt ID (editable) */
   $handler->display->display_options['fields']['field_objektid_nunumeric_editable']['id'] = 'field_objektid_nunumeric_editable';
   $handler->display->display_options['fields']['field_objektid_nunumeric_editable']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric_editable']['field'] = 'field_objektid_nunumeric_editable';
@@ -1880,7 +1882,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -1924,7 +1926,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['status']['label'] = 'Veröffentlicht';
   $handler->display->display_options['fields']['status']['exclude'] = TRUE;
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Field: Content: Schattenobjekt? */
+  /* Field: Content: Schattenwohnung? */
   $handler->display->display_options['fields']['field_obj_schattenobjekt']['id'] = 'field_obj_schattenobjekt';
   $handler->display->display_options['fields']['field_obj_schattenobjekt']['table'] = 'field_data_field_obj_schattenobjekt';
   $handler->display->display_options['fields']['field_obj_schattenobjekt']['field'] = 'field_obj_schattenobjekt';
@@ -2177,7 +2179,7 @@ function hk_admin_views_default_views() {
       ),
     ),
   );
-  /* Filter criterion: Content: Schattenobjekt? (field_obj_schattenobjekt) */
+  /* Filter criterion: Content: Schattenwohnung? (field_obj_schattenobjekt) */
   $handler->display->display_options['filters']['field_obj_schattenobjekt_value']['id'] = 'field_obj_schattenobjekt_value';
   $handler->display->display_options['filters']['field_obj_schattenobjekt_value']['table'] = 'field_data_field_obj_schattenobjekt';
   $handler->display->display_options['filters']['field_obj_schattenobjekt_value']['field'] = 'field_obj_schattenobjekt_value';
@@ -2373,7 +2375,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -2492,7 +2494,7 @@ function hk_admin_views_default_views() {
     'apartment' => 'apartment',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Object ID (field_objektid_nunumeric) */
+  /* Filter criterion: Content: Objekt ID (field_objektid_nunumeric) */
   $handler->display->display_options['filters']['field_objektid_nunumeric_value']['id'] = 'field_objektid_nunumeric_value';
   $handler->display->display_options['filters']['field_objektid_nunumeric_value']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['filters']['field_objektid_nunumeric_value']['field'] = 'field_objektid_nunumeric_value';
@@ -3081,7 +3083,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -3324,7 +3326,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -3407,7 +3409,7 @@ function hk_admin_views_default_views() {
     'objekt' => 'objekt',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Object ID (field_objektid_nunumeric) */
+  /* Filter criterion: Content: Objekt ID (field_objektid_nunumeric) */
   $handler->display->display_options['filters']['field_objektid_nunumeric_value']['id'] = 'field_objektid_nunumeric_value';
   $handler->display->display_options['filters']['field_objektid_nunumeric_value']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['filters']['field_objektid_nunumeric_value']['field'] = 'field_objektid_nunumeric_value';
@@ -3489,7 +3491,7 @@ function hk_admin_views_default_views() {
     6 => 0,
     7 => 0,
   );
-  /* Filter criterion: Content: Schattenobjekt? (field_obj_schattenobjekt) */
+  /* Filter criterion: Content: Schattenwohnung? (field_obj_schattenobjekt) */
   $handler->display->display_options['filters']['field_obj_schattenobjekt_value']['id'] = 'field_obj_schattenobjekt_value';
   $handler->display->display_options['filters']['field_obj_schattenobjekt_value']['table'] = 'field_data_field_obj_schattenobjekt';
   $handler->display->display_options['filters']['field_obj_schattenobjekt_value']['field'] = 'field_obj_schattenobjekt_value';
@@ -3669,7 +3671,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -3744,7 +3746,7 @@ function hk_admin_views_default_views() {
     'apartment' => 'apartment',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Object ID (field_objektid_nunumeric) */
+  /* Filter criterion: Content: Objekt ID (field_objektid_nunumeric) */
   $handler->display->display_options['filters']['field_objektid_nunumeric_value']['id'] = 'field_objektid_nunumeric_value';
   $handler->display->display_options['filters']['field_objektid_nunumeric_value']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['filters']['field_objektid_nunumeric_value']['field'] = 'field_objektid_nunumeric_value';
@@ -4074,7 +4076,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -5093,7 +5095,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -5178,7 +5180,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Object ID */
+  /* Field: Content: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
