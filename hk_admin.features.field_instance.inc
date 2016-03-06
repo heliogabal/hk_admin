@@ -23,10 +23,6 @@ function hk_admin_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'colorbox_node_classes' => '',
-          'colorbox_node_height' => 600,
-          'colorbox_node_link' => FALSE,
-          'colorbox_node_width' => 600,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -80,7 +76,6 @@ function hk_admin_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -162,10 +157,6 @@ function hk_admin_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'colorbox_node_classes' => '',
-          'colorbox_node_height' => 600,
-          'colorbox_node_link' => FALSE,
-          'colorbox_node_width' => 600,
           'link' => 1,
         ),
         'type' => 'entityreference_label',
@@ -249,14 +240,10 @@ function hk_admin_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'colorbox_node_classes' => '',
-          'colorbox_node_height' => 600,
-          'colorbox_node_link' => FALSE,
-          'colorbox_node_width' => 600,
-          'link' => FALSE,
+          'link' => 0,
         ),
         'type' => 'entityreference_label',
         'weight' => 5,
@@ -298,6 +285,48 @@ function hk_admin_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'crm_core_activity-kontaktformular-field_activity_bearbeiter'
+  $field_instances['crm_core_activity-kontaktformular-field_activity_bearbeiter'] = array(
+    'bundle' => 'kontaktformular',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_bearbeiter',
+    'label' => 'Bearbeiter',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 33,
     ),
   );
 
@@ -375,6 +404,7 @@ function hk_admin_field_default_field_instances() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -431,6 +461,44 @@ function hk_admin_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'crm_core_activity-kontaktformular-field_activity_status'
+  $field_instances['crm_core_activity-kontaktformular-field_activity_status'] = array(
+    'bundle' => 'kontaktformular',
+    'default_value' => array(
+      0 => array(
+        'value' => 'Frisch Eingetroffen',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'crm_core_activity',
+    'field_name' => 'field_activity_status',
+    'label' => 'Status',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 35,
+    ),
+  );
+
   // Exported field_instance: 'crm_core_contact-individual-contact_name'
   $field_instances['crm_core_contact-individual-contact_name'] = array(
     'bundle' => 'individual',
@@ -439,7 +507,7 @@ function hk_admin_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'name',
         'settings' => array(
           'format' => 'default',
@@ -486,7 +554,7 @@ function hk_admin_field_default_field_instances() {
       'override_format' => 'default',
       'show_component_required_marker' => 0,
       'size' => array(
-        'credentials' => 35,
+        'credentials' => 6,
         'family' => 20,
         'generational' => 5,
         'given' => 20,
@@ -521,11 +589,12 @@ function hk_admin_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'addressfield',
         'settings' => array(
           'format_handlers' => array(
-            0 => 'address',
+            'address' => 'address',
+            'address-hide-country' => 'address-hide-country',
           ),
           'use_widget_handlers' => 1,
         ),
@@ -572,7 +641,7 @@ function hk_admin_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
@@ -607,7 +676,7 @@ function hk_admin_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -618,7 +687,7 @@ function hk_admin_field_default_field_instances() {
     'entity_type' => 'crm_core_contact',
     'field_name' => 'field_phone',
     'label' => 'Phone',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'ca_phone_parentheses' => 1,
       'ca_phone_separator' => '-',

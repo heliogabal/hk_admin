@@ -10,38 +10,37 @@
 function hk_admin_menu_default_menu_custom() {
   $menus = array();
 
-  // Exported menu: crm-core-admin-menu.
-  $menus['crm-core-admin-menu'] = array(
-    'menu_name' => 'crm-core-admin-menu',
-    'title' => 'CRM Core Admin Menu',
-    'description' => 'Provides access to various settings and configuration within CRM Core.',
+  // Exported menu: management.
+  $menus['management'] = array(
+    'menu_name' => 'management',
+    'title' => 'Management',
+    'description' => 'The <em>Management</em> menu contains links for administrative tasks.',
     'language' => 'und',
     'i18n_mode' => 0,
   );
-  // Exported menu: crm-core-menu.
-  $menus['crm-core-menu'] = array(
-    'menu_name' => 'crm-core-menu',
-    'title' => 'CRM Core',
-    'description' => 'Provides access to various features and functions within CRM Core.',
+  // Exported menu: menu-footer-menu.
+  $menus['menu-footer-menu'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'title' => 'Footer Menu',
+    'description' => '',
     'language' => 'und',
-    'i18n_mode' => 0,
+    'i18n_mode' => 5,
   );
-  // Exported menu: menu-admin-menu.
-  $menus['menu-admin-menu'] = array(
-    'menu_name' => 'menu-admin-menu',
-    'title' => 'Admin Menu',
-    'description' => 'Admin Dashboard mit allen wichtigen Links zur Administration',
+  // Exported menu: menu-service-menu.
+  $menus['menu-service-menu'] = array(
+    'menu_name' => 'menu-service-menu',
+    'title' => 'Service Menu',
+    'description' => 'Das Service Menu enthält die Icons für die Favoriten, Telefon und Suche.',
     'language' => 'und',
-    'i18n_mode' => 0,
+    'i18n_mode' => 5,
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Admin Dashboard mit allen wichtigen Links zur Administration');
-  t('Admin Menu');
-  t('CRM Core');
-  t('CRM Core Admin Menu');
-  t('Provides access to various features and functions within CRM Core.');
-  t('Provides access to various settings and configuration within CRM Core.');
+  t('Das Service Menu enthält die Icons für die Favoriten, Telefon und Suche.');
+  t('Footer Menu');
+  t('Management');
+  t('Service Menu');
+  t('The <em>Management</em> menu contains links for administrative tasks.');
 
 
   return $menus;

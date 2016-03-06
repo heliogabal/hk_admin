@@ -50,7 +50,7 @@ function hk_admin_field_default_field_bases() {
         ),
       ),
       'components' => array(
-        'credentials' => 0,
+        'credentials' => 'credentials',
         'family' => 'family',
         'generational' => 0,
         'given' => 'given',
@@ -72,12 +72,12 @@ VIII
 IX
 X',
       'labels' => array(
-        'credentials' => 'Credentials',
+        'credentials' => 'Credential',
         'family' => 'Last Name',
         'generational' => 'Generational',
         'given' => 'First Name',
         'middle' => 'Middle',
-        'title' => 'Title',
+        'title' => 'Salutation',
       ),
       'max_length' => array(
         'credentials' => 255,
@@ -100,10 +100,7 @@ X',
         'title' => 0,
       ),
       'title_options' => '--please select
-Herr
-Frau
-Dr.
-Prof.',
+[vocabulary:5]',
     ),
     'translatable' => 0,
     'type' => 'name',
@@ -264,6 +261,7 @@ Prof.',
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 0,
       'entity_translation_sync' => FALSE,
+      'values_field' => '',
     ),
     'translatable' => 0,
     'type' => 'list_text',
