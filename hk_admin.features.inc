@@ -23,6 +23,20 @@ function hk_admin_default_crm_core_activity_type() {
     "activity_string" : "Jemand hat das Kontaktformular ausgef\\u00fcllt.",
     "description" : ""
   }');
+  $items['meeting'] = entity_import('crm_core_activity_type', '{
+    "type" : "meeting",
+    "label" : "Meeting",
+    "weight" : 0,
+    "activity_string" : "",
+    "description" : "A meeting between 2 or more contacts"
+  }');
+  $items['phone_call'] = entity_import('crm_core_activity_type', '{
+    "type" : "phone_call",
+    "label" : "Phone call",
+    "weight" : 0,
+    "activity_string" : "",
+    "description" : "A phone call between 2 or more contacts"
+  }');
   return $items;
 }
 
@@ -31,6 +45,17 @@ function hk_admin_default_crm_core_activity_type() {
  */
 function hk_admin_default_crm_core_contact_type() {
   $items = array();
+  $items['household'] = entity_import('crm_core_contact_type', '{
+    "type" : "household",
+    "label" : null,
+    "weight" : 0,
+    "primary_fields" : null,
+    "name" : "Household",
+    "description" : "A collection of individuals generally located at the same residence.",
+    "custom" : "0",
+    "disabled" : "0",
+    "locked" : "1"
+  }');
   $items['individual'] = entity_import('crm_core_contact_type', '{
     "type" : "individual",
     "label" : null,
@@ -40,8 +65,8 @@ function hk_admin_default_crm_core_contact_type() {
       "address" : "field_crm_address",
       "phone" : "field_phone"
     },
-    "name" : "Individual",
-    "description" : "A single individual.",
+    "name" : "Kunde",
+    "description" : "Ein individueller Kunde.",
     "custom" : "0",
     "disabled" : "0",
     "locked" : "1"
@@ -56,6 +81,17 @@ function hk_admin_default_crm_core_contact_type() {
     "custom" : "0",
     "disabled" : "0",
     "locked" : "0"
+  }');
+  $items['organization'] = entity_import('crm_core_contact_type', '{
+    "type" : "organization",
+    "label" : null,
+    "weight" : 0,
+    "primary_fields" : null,
+    "name" : "Organization",
+    "description" : "A collection of individuals or other organizations that has additional contact data.",
+    "custom" : "0",
+    "disabled" : "0",
+    "locked" : "1"
   }');
   return $items;
 }

@@ -10,7 +10,7 @@
 function hk_admin_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'contact_name'
+  // Exported field_base: 'contact_name'.
   $field_bases['contact_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -106,7 +106,7 @@ X',
     'type' => 'name',
   );
 
-  // Exported field_base: 'field_activity_bearbeiter'
+  // Exported field_base: 'field_activity_bearbeiter'.
   $field_bases['field_activity_bearbeiter'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -142,7 +142,7 @@ X',
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_activity_date'
+  // Exported field_base: 'field_activity_date'.
   $field_bases['field_activity_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -173,7 +173,7 @@ X',
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_activity_notes'
+  // Exported field_base: 'field_activity_notes'.
   $field_bases['field_activity_notes'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -196,7 +196,7 @@ X',
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_activity_participants'
+  // Exported field_base: 'field_activity_participants'.
   $field_bases['field_activity_participants'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -236,7 +236,7 @@ X',
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_activity_status'
+  // Exported field_base: 'field_activity_status'.
   $field_bases['field_activity_status'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -267,7 +267,7 @@ X',
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_angefragte_wohnung'
+  // Exported field_base: 'field_angefragte_wohnung'.
   $field_bases['field_angefragte_wohnung'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -303,7 +303,7 @@ X',
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_crm_address'
+  // Exported field_base: 'field_crm_address'.
   $field_bases['field_crm_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -320,7 +320,64 @@ X',
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_e_mail'
+  // Exported field_base: 'field_crm_ansprechpartner'.
+  $field_bases['field_crm_ansprechpartner'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_crm_ansprechpartner',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'mitarbeiter' => 'mitarbeiter',
+        ),
+      ),
+      'target_type' => 'crm_core_contact',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_crm_bemerkungen'.
+  $field_bases['field_crm_bemerkungen'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_crm_bemerkungen',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_e_mail'.
   $field_bases['field_e_mail'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -337,7 +394,7 @@ X',
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_phone'
+  // Exported field_base: 'field_phone'.
   $field_bases['field_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
