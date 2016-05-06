@@ -65,8 +65,8 @@ function hk_admin_default_crm_core_contact_type() {
       "address" : "field_crm_address",
       "phone" : "field_phone"
     },
-    "name" : "Kunde",
-    "description" : "Ein individueller Kunde.",
+    "name" : "Individual",
+    "description" : "A single individual.",
     "custom" : "0",
     "disabled" : "0",
     "locked" : "1"
@@ -112,6 +112,9 @@ function hk_admin_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**
@@ -119,4 +122,30 @@ function hk_admin_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function hk_admin_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function hk_admin_node_info() {
+  $items = array(
+    'besichtigung' => array(
+      'name' => t('Besichtigung'),
+      'base' => 'node_content',
+      'description' => t('Eine Besichtigung kann von einem Makler zu einer Wohnung angelegt werden und dann können Kunden eingeladen werden.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'dokument' => array(
+      'name' => t('Dokument'),
+      'base' => 'node_content',
+      'description' => t('Alle benötigten Dokumente zu Wohnung und zum Kunden.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
 }
