@@ -1,8 +1,8 @@
 name = HK Admin
-description = Backend Interface for Editors to work with apartments
+description = Backend Interface for Editors
 core = 7.x
 package = Features
-version = 7.x-1.2
+version = 7.x-1.3
 project = hk_admin
 dependencies[] = addressfield
 dependencies[] = admin_menu
@@ -52,4 +52,3 @@ features[variable][] = node_preview_dokument
 features[variable][] = node_submitted_dokument
 features[views_view][] = admin
 features[views_view][] = references
-features[views_view][] = references_dialog_search_contacts
