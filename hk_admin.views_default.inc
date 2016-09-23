@@ -29,6 +29,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
     4 => '4',
+    9 => '9',
   );
   $handler->display->display_options['cache']['type'] = 'none-debug';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -440,7 +441,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['status']['field'] = 'status';
   $handler->display->display_options['fields']['status']['exclude'] = TRUE;
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Feld: Inhalt: Aktualisierungszeitpunkt */
+  /* Feld: Inhalt: Änderungsdatum */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
@@ -842,7 +843,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['status']['field'] = 'status';
   $handler->display->display_options['fields']['status']['exclude'] = TRUE;
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Feld: Inhalt: Aktualisierungszeitpunkt */
+  /* Feld: Inhalt: Änderungsdatum */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
@@ -1216,7 +1217,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['status']['field'] = 'status';
   $handler->display->display_options['fields']['status']['exclude'] = TRUE;
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Feld: Inhalt: Aktualisierungszeitpunkt */
+  /* Feld: Inhalt: Änderungsdatum */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
@@ -1932,7 +1933,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Erstellungsdatum';
   $handler->display->display_options['fields']['created']['date_format'] = 'short';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Feld: Inhalt: Aktualisierungszeitpunkt */
+  /* Feld: Inhalt: Änderungsdatum */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
@@ -2675,7 +2676,7 @@ function hk_admin_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Feld: Inhalt: Aktualisierungszeitpunkt */
+  /* Feld: Inhalt: Änderungsdatum */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
